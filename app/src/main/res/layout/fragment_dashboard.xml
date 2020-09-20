@@ -1,0 +1,31 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginBottom="?actionBarSize"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:id="@+id/LinearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/text_notifications"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:text="Session statistics currently unavailable" />
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/photo_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+</ScrollView>

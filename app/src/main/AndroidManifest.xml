@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.stressfoot.stress.sense">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:allowBackup">
+        <activity
+            android:name="org.stressfoot.stress.sense.MainActivity"
+            android:label="@string/app_name"
+            android:configChanges="orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="org.stressfoot.stress.sense.ui.IftttHelperActivity"
+            android:label="IFTTT Help Guide">
+        </activity>
+        <service android:name="com.mbientlab.metawear.android.BtleService" />
+        <service android:name="org.stressfoot.stress.sense.service.TestDataReadService" />
+        <service android:name="org.stressfoot.stress.sense.service.DataHandlerService" />
+        <service android:name="org.stressfoot.stress.sense.service.BLEDataReadService" />
+    </application>
+
+</manifest>
